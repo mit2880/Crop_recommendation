@@ -9,8 +9,8 @@ def main():
     k = st.number_input('Potassium', key="rainfall", format="%f", step=0.9)
     Temperature = st.number_input('Temperature', key="temp", format="%f", step=0.9)
     Humidity = st.number_input('Humidity', key="humidity", format="%f", step=0.9)
-    ph = st.number_input('pH', key="wind_dir", format="%f", step=0.9)
-    Rainfall = st.number_input('Rainfall', key="wind_speed", format="%f", step=0.9)
+    ph = st.number_input('pH', key="ph", format="%f", step=0.9)
+    Rainfall = st.number_input('Rainfall', key="Rainfall", format="%f", step=0.9)
 
     predict_button = st.button('Predict', key="predict_button")
 
