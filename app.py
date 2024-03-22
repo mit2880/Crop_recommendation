@@ -4,13 +4,20 @@ import psycopg2
 def main():
     st.title('Crop Recommendation')
 
-    n = st.number_input('Nitrogen', key="area", format="%f", step=0.9)
-    p = st.number_input('Phosphorus', key="prod", format="%f", step=0.9)
-    k = st.number_input('Potassium', key="rainfall", format="%f", step=0.9)
-    Temperature = st.number_input('Temperature', key="temp", format="%f", step=0.9)
-    Humidity = st.number_input('Humidity', key="humidity", format="%f", step=0.9)
-    ph = st.number_input('pH', key="ph", format="%f", step=0.9)
-    Rainfall = st.number_input('Rainfall', key="Rainfall", format="%f", step=0.9)
+    n = st.number_input('Nitrogen', key="Nitrogen", format="%f", step=1)
+    n = (n-0)/120
+    p = st.number_input('Phosphorus', key="phosphrous", format="%f", step=1)
+    p = (p-5)/140
+    k = st.number_input('Potassium', key="potassium", format="%f", step=1)
+    k = (k-5)/200
+    Temperature = st.number_input('Temperature', key="temp", format="%f", step=1)
+    Temperature = (Temperature-8.825674745)/34.84981831
+    Humidity = st.number_input('Humidity', key="humidity", format="%f", step=1)
+    Humidity = (Humidity-45.02236377)/54.95951224
+    ph = st.number_input('pH', key="ph", format="%f", step=0.1)
+    ph = (ph-4.507523551)/3.488325426
+    Rainfall = st.number_input('Rainfall', key="rainfall", format="%f", step=1)
+    Rainfall = (Rainfall-20.21126747)/228.6480311
 
     predict_button = st.button('Predict', key="predict_button")
 
